@@ -9,202 +9,147 @@
 
 <style>
 
-/* RESET */
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+* { box-sizing:border-box; margin:0; padding:0; }
 
-/* BASE */
 body {
-font-family: 'Open Sans', sans-serif;
-color: #333;
-background: #fff;
-line-height: 1.6;
+font-family:'Open Sans',sans-serif;
+color:#333;
+background:#fff;
 }
 
-a {
-text-decoration: none;
-color: inherit;
-}
+a { text-decoration:none; color:inherit; }
 
 /* HEADER */
 
 .header {
-background: #0b3a57;
-color: white;
-padding: 18px 0;
-position: sticky;
-top: 0;
-z-index: 1000;
+background:#0b3a57;
+color:white;
+padding:18px 0;
 }
 
 .header-inner {
-max-width: 1150px;
-margin: auto;
-padding: 0 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+max-width:1150px;
+margin:auto;
+padding:0 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo {
-font-size: 24px;
-font-weight: 700;
+font-size:24px;
+font-weight:700;
 }
 
 .nav {
-display: flex;
+display:flex;
 }
 
 .nav a {
-margin-left: 22px;
-font-size: 15px;
-font-weight: 600;
+margin-left:22px;
+font-size:15px;
+font-weight:600;
 }
 
 /* HAMBURGER */
 
 .hamburger {
-display: none;
-flex-direction: column;
-cursor: pointer;
+display:none;
+flex-direction:column;
+cursor:pointer;
 }
 
 .hamburger span {
-width: 25px;
-height: 3px;
-background: white;
-margin: 4px 0;
+width:25px;
+height:3px;
+background:white;
+margin:4px 0;
 }
 
 /* PAGE HEADER */
 
 .page-header {
-background: #f6f6f6;
-padding: 70px 20px;
-text-align: center;
+background:#f6f6f6;
+padding:60px 20px;
+text-align:center;
 }
 
 .page-header h1 {
-font-size: 38px;
-color: #0b3a57;
-margin-bottom: 12px;
+font-size:34px;
+color:#0b3a57;
 }
 
 .underline {
-width: 70px;
-height: 4px;
-background: #d4a047;
-margin: 0 auto;
+width:70px;
+height:4px;
+background:#d4a047;
+margin:12px auto 0;
 }
 
-/* CONTACT SECTION */
+/* CONTENT */
 
 .contact-section {
-padding: 80px 20px;
-text-align: center;
+padding:70px 20px;
+text-align:center;
 }
 
 .contact-text {
-max-width: 700px;
-margin: 0 auto 50px auto;
-font-size: 17px;
+max-width:700px;
+margin:0 auto 40px;
+font-size:16px;
 }
 
-/* BUTTON GRID */
+/* BUTTONS */
 
 .contact-buttons {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
-max-width: 900px;
-margin: auto;
+max-width:800px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;
 }
-
-/* BUTTON STYLE */
 
 .contact-btn {
-padding: 18px;
-border-radius: 12px;
-font-size: 16px;
-font-weight: 600;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-transition: all 0.25s ease;
-box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+padding:16px;
+border-radius:10px;
+font-weight:600;
+color:white;
+background:#0b3a57;
+transition:.25s;
 }
-
-/* INDIVIDUAL COLORS */
-
-.email {
-background: #0b3a57;
-color: white;
-}
-
-.phone {
-background: #1f8a3b;
-color: white;
-}
-
-.whatsapp {
-background: #25D366;
-color: white;
-}
-
-.telegram {
-background: #229ED9;
-color: white;
-}
-
-/* HOVER EFFECT */
 
 .contact-btn:hover {
-transform: translateY(-4px);
-box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+transform:translateY(-3px);
 }
 
 /* FOOTER */
 
 .footer {
-background: #111;
-color: #ccc;
-padding: 30px 20px;
-text-align: center;
-font-size: 14px;
+background:#111;
+color:#ccc;
+padding:25px;
+text-align:center;
+font-size:14px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
 .nav {
-display: none;
-flex-direction: column;
-background: #0b3a57;
-width: 100%;
-text-align: center;
-padding: 15px 0;
+display:none;
+flex-direction:column;
+background:#0b3a57;
+width:100%;
+text-align:center;
+padding:15px 0;
 }
 
-.nav.active {
-display: flex;
-}
+.nav.active { display:flex; }
 
-.nav a {
-margin: 12px 0;
-}
+.nav a { margin:12px 0; }
 
-.hamburger {
-display: flex;
-}
-
-.page-header h1 {
-font-size: 30px;
-}
+.hamburger { display:flex; }
 
 }
 
@@ -213,18 +158,67 @@ font-size: 30px;
 
 <body>
 
-<!-- HEADER -->
-
 <header class="header">
 <div class="header-inner">
 
 <div class="logo">Miralt – Účtovníctvo</div>
 
 <div class="hamburger" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
+<span></span><span></span><span></span>
 </div>
 
 <nav class="nav" id="mobileMenu">
-<a href="index.html">Domov</
+<a href="index.html">Domov</a>
+<a href="about.html">O nás</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="cennik.html">Cenová ponuka</a>
+</nav>
+
+</div>
+</header>
+
+<section class="page-header">
+<h1>Kontakt</h1>
+<div class="underline"></div>
+</section>
+
+<section class="contact-section">
+
+<p class="contact-text">
+Máte otázky alebo záujem o spoluprácu? Kontaktujte nás a ozveme sa Vám čo najskôr.
+</p>
+
+<div class="contact-buttons">
+
+<a href="mailto:01irina08@gmail.com" class="contact-btn">
+Email
+</a>
+
+<a href="tel:+421911939590" class="contact-btn">
+Zavolať
+</a>
+
+<a href="https://wa.me/421911939590" target="_blank" class="contact-btn">
+WhatsApp
+</a>
+
+<a href="https://t.me/421911939590" target="_blank" class="contact-btn">
+Telegram
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer">
+<p>© 2026 Miralt – Účtovníctvo</p>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
