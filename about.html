@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nás – Miralt Účtovníctvo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* BASE */
+body {
+font-family: 'Open Sans', sans-serif;
+color: #333;
+background: #fff;
+line-height: 1.6;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* HEADER */
+
+.header {
+background: #0b3a57;
+color: white;
+padding: 18px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.header-inner {
+max-width: 1150px;
+margin: auto;
+padding: 0 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 24px;
+font-weight: 700;
+}
+
+.nav {
+display: flex;
+}
+
+.nav a {
+margin-left: 22px;
+font-size: 15px;
+font-weight: 600;
+}
+
+/* HAMBURGER */
+
+.hamburger {
+display: none;
+flex-direction: column;
+cursor: pointer;
+}
+
+.hamburger span {
+width: 25px;
+height: 3px;
+background: white;
+margin: 4px 0;
+}
+
+/* PAGE HERO */
+
+.page-header {
+background: #f6f6f6;
+padding: 70px 20px;
+text-align: center;
+}
+
+.page-header h1 {
+font-size: 38px;
+color: #0b3a57;
+margin-bottom: 12px;
+}
+
+.underline {
+width: 70px;
+height: 4px;
+background: #d4a047;
+margin: 0 auto;
+}
+
+/* CONTENT */
+
+.section {
+padding: 70px 20px;
+}
+
+.container {
+max-width: 1100px;
+margin: auto;
+}
+
+/* TEXT */
+
+.about-text {
+max-width: 850px;
+margin: 0 auto 50px auto;
+text-align: center;
+font-size: 16px;
+}
+
+/* CERT IMAGES */
+
+.cert-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+margin-bottom: 70px;
+}
+
+.cert-grid img {
+width: 100%;
+border-radius: 18px;
+cursor: pointer;
+box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+transition: transform 0.3s ease;
+}
+
+.cert-grid img:hover {
+transform: scale(1.03);
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 3000;
+}
+
+.lightbox img {
+max-width: 90%;
+max-height: 90%;
+border-radius: 10px;
+}
+
+/* BENEFITS */
+
+.benefits {
+background: #faf7f2;
+padding: 70px 20px;
+}
+
+.benefits h2 {
+text-align: center;
+font-size: 30px;
+color: #0b3a57;
+margin-bottom: 40px;
+}
+
+.benefit-list {
+max-width: 900px;
+margin: auto;
+}
+
+.benefit-item {
+padding: 18px 0;
+border-bottom: 1px solid #ddd;
+}
+
+.benefit-title {
+font-weight: 700;
+color: #c18b2c;
+font-size: 16px;
+margin-bottom: 6px;
+}
+
+.benefit-text {
+font-size: 14px;
+color: #444;
+}
+
+/* FOOTER */
+
+.footer {
+background: #111;
+color: #ccc;
+padding: 30px 20px;
+text-align: center;
+font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+.nav {
+display: none;
+flex-direction: column;
+background: #0b3a57;
+width: 100%;
+text-align: center;
+padding: 15px 0;
+}
+
+.nav.active {
+display: flex;
+}
+
+.nav a {
+margin: 12px 0;
+}
+
+.hamburger {
+display: flex;
+}
+
+.page-header h1 {
+font-size: 30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+<div class="header-inner">
+
+<div class="logo">Miralt – Účtovníctvo</div>
+
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav class="nav" id="mobileMenu">
+<a href="index.html">Domov</a>
+<a href="about.html">O nás</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="cennik.html">Cenová ponuka</a>
+</nav>
+
+</div>
+</header>
+
+<!-- PAGE HEADER -->
+
+<section class="page-header">
+<h1>Kto sme</h1>
+<div class="underline"></div>
+</section>
+
+<!-- ABOUT TEXT -->
+
+<section class="section">
+<div class="container">
+
+<p class="about-text">
+Volám sa Iryna Cherkasova. Pochádzam z Ukrajiny, na Slovensku žijem s rodinou od roku 2014.
+Vyštudovala som obchodno-ekonomickú univerzitu v Kyjeve so zameraním na účtovníctvo a audit.
+Od roku 2015 poskytujem účtovnícke služby pre SZČO a od roku 2023 aj pre firmy.
+Našim cieľom je poskytovať klientom stabilné, presné a spoľahlivé účtovnícke riešenia.
+</p>
+
+<!-- CERTIFICATES -->
+
+<div class="cert-grid">
+<img src="cert1.jpg" onclick="openLightbox(this.src)">
+<img src="cert2.jpg" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+<h2>Prečo si vybrať nás</h2>
+
+<div class="benefit-list">
+
+<div class="benefit-item">
+<div class="benefit-title">Dlhoročné skúsenosti v účtovníctve</div>
+<div class="benefit-text">
+S účtovníctvom a daňovým poradenstvom máme dlhoročné skúsenosti od roku 1998,
+na Slovensku pôsobíme od roku 2015.
+</div>
+</div>
+
+<div class="benefit-item">
+<div class="benefit-title">Moderné a overené účtovné softvéry</div>
+<div class="benefit-text">
+Pracujeme so systémami Omega, Alfa, Olymp a Pohoda.
+</div>
+</div>
+
+<div class="benefit-item">
+<div class="benefit-title">Kvalita na prvom mieste</div>
+<div class="benefit-text">
+Presnosť a správnosť spracovania účtovných dokladov je pre nás prioritou.
+</div>
+</div>
+
+<div class="benefit-item">
+<div class="benefit-title">Plnenie termínov</div>
+<div class="benefit-text">
+Dodržiavanie zákonných lehôt a včasné odovzdanie dokumentov je samozrejmosťou.
+</div>
+</div>
+
+<div class="benefit-item">
+<div class="benefit-title">Poistenie zodpovednosti</div>
+<div class="benefit-text">
+Sme poistení pre prípad škody spôsobenej pri výkone povolania.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>© 2026 Miralt – Účtovníctvo</p>
+</footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+function toggleMenu() {
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function openLightbox(src) {
+document.getElementById("lightbox").style.display = "flex";
+document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+document.getElementById("lightbox").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
