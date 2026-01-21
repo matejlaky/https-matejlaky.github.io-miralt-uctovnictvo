@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt – Miralt Účtovníctvo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* BASE */
+body {
+font-family: 'Open Sans', sans-serif;
+color: #333;
+background: #fff;
+line-height: 1.6;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* HEADER */
+
+.header {
+background: #0b3a57;
+color: white;
+padding: 18px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.header-inner {
+max-width: 1150px;
+margin: auto;
+padding: 0 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 24px;
+font-weight: 700;
+}
+
+.nav {
+display: flex;
+}
+
+.nav a {
+margin-left: 22px;
+font-size: 15px;
+font-weight: 600;
+}
+
+/* HAMBURGER */
+
+.hamburger {
+display: none;
+flex-direction: column;
+cursor: pointer;
+}
+
+.hamburger span {
+width: 25px;
+height: 3px;
+background: white;
+margin: 4px 0;
+}
+
+/* PAGE HEADER */
+
+.page-header {
+background: #f6f6f6;
+padding: 70px 20px;
+text-align: center;
+}
+
+.page-header h1 {
+font-size: 38px;
+color: #0b3a57;
+margin-bottom: 12px;
+}
+
+.underline {
+width: 70px;
+height: 4px;
+background: #d4a047;
+margin: 0 auto;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+padding: 80px 20px;
+text-align: center;
+}
+
+.contact-text {
+max-width: 700px;
+margin: 0 auto 50px auto;
+font-size: 17px;
+}
+
+/* BUTTON GRID */
+
+.contact-buttons {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+max-width: 900px;
+margin: auto;
+}
+
+/* BUTTON STYLE */
+
+.contact-btn {
+padding: 18px;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 600;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+transition: all 0.25s ease;
+box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* INDIVIDUAL COLORS */
+
+.email {
+background: #0b3a57;
+color: white;
+}
+
+.phone {
+background: #1f8a3b;
+color: white;
+}
+
+.whatsapp {
+background: #25D366;
+color: white;
+}
+
+.telegram {
+background: #229ED9;
+color: white;
+}
+
+/* HOVER EFFECT */
+
+.contact-btn:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* FOOTER */
+
+.footer {
+background: #111;
+color: #ccc;
+padding: 30px 20px;
+text-align: center;
+font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+.nav {
+display: none;
+flex-direction: column;
+background: #0b3a57;
+width: 100%;
+text-align: center;
+padding: 15px 0;
+}
+
+.nav.active {
+display: flex;
+}
+
+.nav a {
+margin: 12px 0;
+}
+
+.hamburger {
+display: flex;
+}
+
+.page-header h1 {
+font-size: 30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+<div class="header-inner">
+
+<div class="logo">Miralt – Účtovníctvo</div>
+
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav class="nav" id="mobileMenu">
+<a href="index.html">Domov</
