@@ -37,7 +37,10 @@ a {
 .header {
     background: #0b3a57;
     color: white;
-    padding: 22px 0;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-inner {
@@ -50,15 +53,35 @@ a {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+}
+
+/* NAV */
+
+.nav {
+    display: flex;
 }
 
 .nav a {
     margin-left: 22px;
     font-size: 15px;
     font-weight: 600;
+}
+
+/* HAMBURGER */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
 }
 
 /* HERO */
@@ -127,6 +150,7 @@ a {
     color: #0b3a57;
     margin-bottom: 10px;
 }
+
 .services-image {
     width: 100%;
     max-width: 900px;
@@ -135,6 +159,7 @@ a {
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
+
 /* ABOUT */
 
 .about p {
@@ -197,12 +222,25 @@ button {
 
 @media (max-width: 768px) {
 
-.header-inner {
+.nav {
+    display: none;
     flex-direction: column;
+    background: #0b3a57;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
 }
 
-.nav {
-    margin-top: 10px;
+.nav.active {
+    display: flex;
+}
+
+.nav a {
+    margin: 12px 0;
+}
+
+.hamburger {
+    display: flex;
 }
 
 .hero h1 {
@@ -220,12 +258,22 @@ button {
 
 <header class="header">
     <div class="header-inner">
+
         <div class="logo">Miralt – Účtovníctvo</div>
-        <nav class="nav">
-            <a href="#sluzby">Služby</a>
-            <a href="#onas">O nás</a>
-            <a href="#kontakt">Kontakt</a>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav" id="mobileMenu">
+            <a href="index.html">Domov</a>
+            <a href="about.html">O nás</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="cennik.html">Cenová ponuka</a>
         </nav>
+
     </div>
 </header>
 
@@ -240,7 +288,7 @@ button {
 
 <section class="section intro">
     <div class="container">
-        <h2 class="section-title">Spravuj svoje financie s istotou a dôverou s nami</h1>
+        <h2 class="section-title">Spravuj svoje financie s istotou a dôverou s nami</h2>
         <p>
             Vítame Vás na stránke Miralt – účtovníctvo, kde sa zameriavame na poskytovanie kvalitného účtovníckeho servisu
             a daňového poradenstva pre podniky v meste Trenčín a okolí. S nami sa nemusíte starať o finančné záležitosti
@@ -251,7 +299,7 @@ button {
 
 <!-- SERVICES -->
 
-<section class="section" id="sluzby">
+<section class="section">
     <div class="container">
         <img src="services.jpg" class="services-image" alt="Účtovnícke služby">
         <h2 class="section-title">Služby</h2>
@@ -282,82 +330,26 @@ button {
     </div>
 </section>
 
-<!-- ABOUT -->
-
-<section class="section about" id="onas">
-    <div class="container">
-        <h2 class="section-title">Kto sme</h2>
-
-        <p>
-            Volám sa Iryna Cherkasova. Pochádzam z Ukrajiny, na Slovensku žijem s rodinou od roku 2014.
-            Vyštudovala som obchodno-ekonomickú univerzitu v Kyjeve so zameraním na účtovníctvo a audit. 
-            Pracovala som ako účtovníčka v rôznych odvetviach ekonomiky a pre rôzne podniky. 
-            Keď prišla na Slovensko od 2015 roku spravujem účtovníctvo pre živnostníkov čiže Jednoduché, a od 2023 roku po ukončení kurzov Podvojného účtovníctva pracujem s firmami.
-        </p>
-
-        <p>
-            Od roku 2015 poskytujem účtovnícke služby pre SZČO a od roku 2023 aj pre firmy.
-        </p>
-
-        <ul>
-            <li>Dlhoročné skúsenosti</li>
-            <li>Moderné účtovné softvéry</li>
-            <li>Individuálny prístup ku klientom</li>
-            <li>Zodpovednosť a diskrétnosť</li>
-        </ul>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="section" id="kontakt">
-    <div class="container">
-        <h2 class="section-title">Kontaktujte nás</h2>
-
-        <div class="form-wrapper">
-
-            <form>
-
-                <div class="form-group">
-                    <label>Meno</label>
-                    <input type="text" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Služba</label>
-                    <select>
-                        <option>Jednoduché účtovníctvo</option>
-                        <option>Podvojné účtovníctvo</option>
-                        <option>Mzdová agenda</option>
-                        <option>Poradenstvo</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Správa</label>
-                    <textarea rows="4"></textarea>
-                </div>
-
-                <button type="submit">Odoslať</button>
-
-            </form>
-
-        </div>
-
-    </div>
-</section>
-
 <!-- FOOTER -->
 
 <footer class="footer">
     <p>© 2026 Miralt – Účtovníctvo</p>
 </footer>
+
+<script>
+
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+// automaticky zatvorí menu po kliknutí
+document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.remove("active");
+    });
+});
+
+</script>
 
 </body>
 </html>
