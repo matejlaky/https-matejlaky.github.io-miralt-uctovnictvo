@@ -9,6 +9,19 @@
 
 <style>
 
+/* ===== COLOR SYSTEM (ZHODA S INDEX) ===== */
+
+:root{
+--dark-blue:#071a2d;
+--main-blue:#0b2545;
+--card-blue:#0f2f57;
+--accent-blue:#3fa9f5;
+--text-light:#ffffff;
+--text-muted:#cfd9e6;
+}
+
+/* ===== RESET ===== */
+
 *{
 margin:0;
 padding:0;
@@ -17,19 +30,19 @@ box-sizing:border-box;
 
 body{
 font-family:'Montserrat',sans-serif;
-background:#071a2d;
-color:white;
+background:var(--dark-blue);
+color:var(--text-light);
 }
 
-/* ====== HEADER ====== */
+/* ===== HEADER ===== */
 
 header{
 position:fixed;
 top:0;
 width:100%;
-background:#0b2545;
+background:var(--main-blue);
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.3);
+box-shadow:0 3px 15px rgba(0,0,0,0.4);
 }
 
 .navbar{
@@ -44,10 +57,10 @@ align-items:center;
 .logo{
 font-weight:700;
 font-size:18px;
-color:#3fa9f5;
+color:var(--accent-blue);
 }
 
-/* ====== MENU ====== */
+/* ===== MENU ===== */
 
 .nav-links{
 list-style:none;
@@ -57,16 +70,16 @@ gap:30px;
 
 .nav-links a{
 text-decoration:none;
-color:white;
+color:var(--text-light);
 font-weight:600;
-transition:.3s;
+transition:.25s;
 }
 
 .nav-links a:hover{
-color:#3fa9f5;
+color:var(--accent-blue);
 }
 
-/* ====== HAMBURGER ====== */
+/* ===== HAMBURGER ===== */
 
 .hamburger{
 display:none;
@@ -77,18 +90,18 @@ cursor:pointer;
 .hamburger span{
 height:3px;
 width:26px;
-background:white;
+background:var(--text-light);
 margin:4px 0;
 border-radius:2px;
 }
 
-/* ====== BACKGROUND ====== */
+/* ===== BACKGROUND ===== */
 
 .section-bg{
 min-height:100vh;
 padding:120px 20px 70px;
 background:
-linear-gradient(rgba(7,26,45,0.85), rgba(7,26,45,0.85)),
+linear-gradient(rgba(7,26,45,0.9), rgba(7,26,45,0.9)),
 url("logo.jpg") center center no-repeat;
 background-size:contain;
 display:flex;
@@ -96,20 +109,20 @@ align-items:center;
 justify-content:center;
 }
 
-/* ====== CONTENT ====== */
+/* ===== CONTENT BOX ===== */
 
 .box{
-background:rgba(11,37,69,0.9);
+background:var(--card-blue);
 max-width:800px;
 width:100%;
 padding:50px 40px;
-border-radius:15px;
-box-shadow:0 0 25px rgba(0,0,0,0.5);
+border-radius:16px;
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
 }
 
 h1{
 text-align:center;
-color:#3fa9f5;
+color:var(--accent-blue);
 font-size:32px;
 margin-bottom:10px;
 }
@@ -117,7 +130,7 @@ margin-bottom:10px;
 .line{
 width:70px;
 height:4px;
-background:#3fa9f5;
+background:var(--accent-blue);
 margin:0 auto 35px;
 border-radius:2px;
 }
@@ -126,34 +139,35 @@ ul{
 list-style:none;
 font-size:17px;
 line-height:1.8;
+color:var(--text-muted);
 }
 
 ul li{
 padding:10px 0;
-border-bottom:1px solid rgba(255,255,255,0.15);
+border-bottom:1px solid rgba(255,255,255,0.12);
 }
 
 ul span{
-color:#3fa9f5;
+color:var(--accent-blue);
 font-weight:700;
 }
 
-/* ====== FOOTER ====== */
+/* ===== FOOTER ===== */
 
 footer{
-background:#0b2545;
+background:var(--main-blue);
 text-align:center;
 padding:20px;
 font-size:14px;
-color:#ccc;
+color:var(--text-muted);
 }
 
 footer span{
-color:#3fa9f5;
+color:var(--accent-blue);
 font-weight:600;
 }
 
-/* ====== MOBILE ====== */
+/* ===== MOBILE ===== */
 
 @media(max-width:768px){
 
@@ -161,7 +175,7 @@ font-weight:600;
 position:absolute;
 top:65px;
 right:0;
-background:#0b2545;
+background:var(--main-blue);
 width:100%;
 flex-direction:column;
 align-items:center;
@@ -199,7 +213,6 @@ font-size:15px;
 
 <body>
 
-<!-- HEADER -->
 <header>
 <div class="navbar">
 
@@ -221,7 +234,6 @@ font-size:15px;
 </div>
 </header>
 
-<!-- CONTENT -->
 <section class="section-bg">
 
 <div class="box">
@@ -242,18 +254,14 @@ font-size:15px;
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2026 <span>Miralt Účtovníctvo</span> | Všetky práva vyhradené
+© 2026 <span>Miralt Účtovníctvo</span>
 </footer>
 
-<!-- JS -->
 <script>
-
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("active");
 }
-
 </script>
 
 </body>
