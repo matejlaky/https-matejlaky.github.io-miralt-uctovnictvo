@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miralt - Účtovníctvo</title>
+<style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; color:#333; }
+    header { background:#004367; color:white; padding:20px; text-align:center; }
+    nav { text-align:center; background:#01629b; padding:10px 0; }
+    nav a { color:white; margin:0 12px; text-decoration:none; font-weight:bold;}
+    main { padding:20px; max-width:900px; margin:auto; }
+    section { margin-bottom:30px; }
+    h1,h2,h3 { color:#004367; }
+    .services { display: flex; flex-wrap: wrap; gap:20px; }
+    .service { flex:1; min-width:250px; background:#f5f5f5; padding:15px; border-radius:5px; }
+    .form-group { margin-bottom:12px; }
+    input, select, textarea { width:100%; padding:8px; border:1px solid #aaa; border-radius:4px; }
+    button { padding:10px 18px; background:#004367; border:none; color:white; cursor:pointer; border-radius:4px; }
+    footer { background:#222; color:white; text-align:center; padding:15px; font-size:0.9em; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Miralt - Účtovníctvo</h1>
+    <p>Spravuj svoje financie s istotou a dôverou s nami</p>
+</header>
+
+<nav>
+    <a href="#services">Služby</a>
+    <a href="#about">O nás</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<main>
+
+<section id="hero">
+    <img src="https://miralt-uctovnictvo.webnode.sk/_files/ugd/…" alt="Miralt účtovníctvo" style="width:100%; max-height:350px; object-fit:cover;">
+    <h2>Chcete nás kontaktovať?</h2>
+    <p><strong>+421 911 939 590</strong> (WhatsApp, Telegram)</p>
+</section>
+
+<section id="intro">
+    <h2>Vítame Vás</h2>
+    <p>Vítame Vás na stránke Miralt-účtovníctvo, kde sa zameriavame na poskytovanie kvalitného účtovníckeho servisu a daňového poradenstva pre podniky v meste Trenčín a okolí. S nami sa nemusíte starať o finančné záležitosti a môžete sa plne sústrediť na rozvoj Vašej firmy.</p>
+</section>
+
+<section id="services">
+    <h2>Služby</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Jednoduché účtovníctvo</h3>
+            <p>Kompletné vedenie jednoduchého účtovníctva pre živnostníkov (SZČO).</p>
+        </div>
+        <div class="service">
+            <h3>Podvojné účtovníctvo</h3>
+            <p>Kompletné vedenie podvojného účtovníctva pre malé a stredné firmy.</p>
+        </div>
+        <div class="service">
+            <h3>Mzdy a personalistika</h3>
+            <p>Spracovanie mzdovej a personálnej agendy pre Vašich zamestnancov.</p>
+        </div>
+        <div class="service">
+            <h3>Ekonomické poradenstvo</h3>
+            <p>Odborné poradenstvo ohľadom daňových predpisov, zisťovania základu dane a daňových priznaní.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>Kto sme</h2>
+    <p>Volám sa <strong>Iryna Cherkasova</strong>. Pochádzam z Ukrajiny, na Slovensku žijem s rodinou od 2014 roku. V meste Kyjeve som vyštudovala štátnu obchodno-ekonomickú univerzitu – účtovníctvo a audit. Pracovala som ako účtovníčka v rôznych odvetviach ekonomiky a pre rôzne podniky.</p>
+    <p>Od 2015 roku spravujem účtovníctvo pre živnostníkov (jednoduché) a od 2023 roku po skúškach podvojného účtovníctva pracujem aj s firmami.</p>
+    <ul>
+        <li>Dlhoročné skúsenosti v účtovníctve</li>
+        <li>Účtujeme v moderných softvéroch (Omega, Alfa, Olymp, Pohoda)</li>
+        <li>Kvalita a správnosť na prvom mieste</li>
+        <li>Plnenie termínov a včasnosť odovzdania úradom</li>
+        <li>Poistenie zodpovednosti za škodu</li>
+    </ul>
+</section>
+
+<section id="form">
+    <h2>Objednajte si naše služby</h2>
+    <form action="mailto:miralt@example.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="name">Meno</label>
+            <input type="text" id="name" name="Meno" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="service">Vybraná služba</label>
+            <select id="service" name="Služba">
+                <option>Jednoduché účtovníctvo</option>
+                <option>Podvojné účtovníctvo</option>
+                <option>Mzdy a personalistika</option>
+                <option>Poradenstvo</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Správa</label>
+            <textarea id="message" name="Správa" rows="4"></textarea>
+        </div>
+        <button type="submit">Odoslať</button>
+    </form>
+</section>
+
+<section id="footerinfo">
+    <h2>Firemné údaje</h2>
+    <p><strong>IČO:</strong> 53 493 222<br>
+       <strong>DIČ:</strong> 2121415263<br>
+       <strong>IČ DPH:</strong> SK2121415263<br>
+       <strong>OR SR:</strong> Bratislava III, oddiel Sro Vložka č.: 185859/B<br>
+       <strong>SK NACE:</strong> 70220<br>
+       <strong>Fio banka:</strong> SK63 8330 0000 0022 0195 0175</p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2025 Miralt-účtovníctvo | Vytvorené staticky na základe originálnej stránky Webnode</p>
+</footer>
+
+</body>
+</html>
