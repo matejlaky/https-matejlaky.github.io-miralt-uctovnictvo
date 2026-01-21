@@ -1,268 +1,256 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firemné údaje | Miralt Účtovníctvo</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* ===== COLOR SYSTEM (ZHODA S INDEX) ===== */
-
-:root{
---dark-blue:#071a2d;
---main-blue:#0b2545;
---card-blue:#0f2f57;
---accent-blue:#3fa9f5;
---text-light:#ffffff;
---text-muted:#cfd9e6;
-}
-
-/* ===== RESET ===== */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Montserrat',sans-serif;
-background:var(--dark-blue);
-color:var(--text-light);
-}
-
-/* ===== HEADER ===== */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:var(--main-blue);
-z-index:1000;
-box-shadow:0 3px 15px rgba(0,0,0,0.4);
-}
-
-.navbar{
-max-width:1200px;
-margin:auto;
-padding:15px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-weight:700;
-font-size:18px;
-color:var(--accent-blue);
-}
-
-/* ===== MENU ===== */
-
-.nav-links{
-list-style:none;
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:var(--text-light);
-font-weight:600;
-transition:.25s;
-}
-
-.nav-links a:hover{
-color:var(--accent-blue);
-}
-
-/* ===== HAMBURGER ===== */
-
-.hamburger{
-display:none;
-flex-direction:column;
-cursor:pointer;
-}
-
-.hamburger span{
-height:3px;
-width:26px;
-background:var(--text-light);
-margin:4px 0;
-border-radius:2px;
-}
-
-/* ===== BACKGROUND ===== */
-
-.section-bg{
-min-height:100vh;
-padding:120px 20px 70px;
-background:
-linear-gradient(rgba(7,26,45,0.9), rgba(7,26,45,0.9)),
-url("logo.jpg") center center no-repeat;
-background-size:contain;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-/* ===== CONTENT BOX ===== */
-
-.box{
-background:var(--card-blue);
-max-width:800px;
-width:100%;
-padding:50px 40px;
-border-radius:16px;
-box-shadow:0 15px 35px rgba(0,0,0,0.6);
-}
-
-h1{
-text-align:center;
-color:var(--accent-blue);
-font-size:32px;
-margin-bottom:10px;
-}
-
-.line{
-width:70px;
-height:4px;
-background:var(--accent-blue);
-margin:0 auto 35px;
-border-radius:2px;
-}
-
-ul{
-list-style:none;
-font-size:17px;
-line-height:1.8;
-color:var(--text-muted);
-}
-
-ul li{
-padding:10px 0;
-border-bottom:1px solid rgba(255,255,255,0.12);
-}
-
-ul span{
-color:var(--accent-blue);
-font-weight:700;
-}
-
-/* ===== FOOTER ===== */
-
-footer{
-background:var(--main-blue);
-text-align:center;
-padding:20px;
-font-size:14px;
-color:var(--text-muted);
-}
-
-footer span{
-color:var(--accent-blue);
-font-weight:600;
-}
-
-/* ===== MOBILE ===== */
-
-@media(max-width:768px){
-
-.nav-links{
-position:absolute;
-top:65px;
-right:0;
-background:var(--main-blue);
-width:100%;
-flex-direction:column;
-align-items:center;
-display:none;
-}
-
-.nav-links li{
-padding:15px 0;
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.hamburger{
-display:flex;
-}
-
-.box{
-padding:30px 20px;
-}
-
-h1{
-font-size:25px;
-}
-
-ul{
-font-size:15px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="navbar">
-
-<div class="logo">Miralt Účtovníctvo</div>
-
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Domov</a></li>
-<li><a href="sluzby.html">Služby</a></li>
-<li><a href="firma.html">Firma</a></li>
-<li><a href="kontakt.html">Kontakt</a></li>
-</ul>
-
-<div class="hamburger" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-</div>
-</header>
-
-<section class="section-bg">
-
-<div class="box">
-
-<h1>Základné údaje o našej firme</h1>
-<div class="line"></div>
-
-<ul>
-<li><span>IČO:</span> 53 493 222</li>
-<li><span>DIČ:</span> 2121415263</li>
-<li><span>IČ DPH:</span> SK2121415263</li>
-<li><span>OR SR:</span> Bratislava III, oddiel: Sro, vložka číslo: 185859/B</li>
-<li><span>SK NACE:</span> 70220</li>
-<li><span>Fio banka:</span> SK6383300000002201950175</li>
-</ul>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 <span>Miralt Účtovníctvo</span>
-</footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("active");
-}
-</script>
-
-</body>
+<!DOCTYPE html>  
+<html lang="sk">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Firemné údaje | Miralt Účtovníctvo</title>  
+  
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">  
+  
+<style>  
+  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+}  
+  
+body{  
+font-family:'Montserrat',sans-serif;  
+background:#071a2d;  
+color:white;  
+}  
+  
+/* ===== HEADER ===== */  
+  
+header{  
+position:fixed;  
+top:0;  
+width:100%;  
+background:#0b2545;  
+z-index:1000;  
+box-shadow:0 2px 10px rgba(0,0,0,0.3);  
+}  
+  
+.navbar{  
+max-width:1200px;  
+margin:auto;  
+padding:15px 20px;  
+display:flex;  
+justify-content:space-between;  
+align-items:center;  
+}  
+  
+.logo{  
+font-weight:700;  
+font-size:18px;  
+color:#3fa9f5;  
+}  
+  
+/* ===== MENU ===== */  
+  
+.nav-links{  
+list-style:none;  
+display:flex;  
+gap:30px;  
+}  
+  
+.nav-links a{  
+text-decoration:none;  
+color:white;  
+font-weight:600;  
+transition:.3s;  
+}  
+  
+.nav-links a:hover{  
+color:#3fa9f5;  
+}  
+  
+/* ===== HAMBURGER ===== */  
+  
+.hamburger{  
+display:none;  
+flex-direction:column;  
+cursor:pointer;  
+}  
+  
+.hamburger span{  
+height:3px;  
+width:26px;  
+background:white;  
+margin:4px 0;  
+border-radius:2px;  
+}  
+  
+/* ===== MAIN SECTION ===== */  
+  
+.section-bg{  
+min-height:100vh;  
+padding:120px 20px 70px;  
+background:#071a2d url("logo.jpg") center center no-repeat;  
+background-size:350px;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+}  
+  
+/* ===== CONTENT BOX ===== */  
+  
+.box{  
+background:#0b2545;  
+max-width:800px;  
+width:100%;  
+padding:50px 40px;  
+border-radius:15px;  
+box-shadow:0 0 20px rgba(0,0,0,0.4);  
+}  
+  
+h1{  
+text-align:center;  
+color:#3fa9f5;  
+font-size:32px;  
+margin-bottom:10px;  
+}  
+  
+.line{  
+width:70px;  
+height:4px;  
+background:#3fa9f5;  
+margin:0 auto 35px;  
+border-radius:2px;  
+}  
+  
+ul{  
+list-style:none;  
+font-size:17px;  
+line-height:1.8;  
+}  
+  
+ul li{  
+padding:10px 0;  
+border-bottom:1px solid rgba(255,255,255,0.15);  
+}  
+  
+ul span{  
+color:#3fa9f5;  
+font-weight:700;  
+}  
+  
+/* ===== FOOTER ===== */  
+  
+footer{  
+background:#0b2545;  
+text-align:center;  
+padding:20px;  
+font-size:14px;  
+color:#ccc;  
+}  
+  
+footer span{  
+color:#3fa9f5;  
+font-weight:600;  
+}  
+  
+/* ===== MOBILE ===== */  
+  
+@media(max-width:768px){  
+  
+.nav-links{  
+position:absolute;  
+top:65px;  
+right:0;  
+background:#0b2545;  
+width:100%;  
+flex-direction:column;  
+align-items:center;  
+display:none;  
+}  
+  
+.nav-links li{  
+padding:15px 0;  
+}  
+  
+.nav-links.active{  
+display:flex;  
+}  
+  
+.hamburger{  
+display:flex;  
+}  
+  
+.box{  
+padding:30px 20px;  
+}  
+  
+h1{  
+font-size:25px;  
+}  
+  
+ul{  
+font-size:15px;  
+}  
+  
+.section-bg{  
+background-size:220px;  
+}  
+  
+}  
+  
+</style>  
+</head>  
+  
+<body>  
+  
+<header>  
+<div class="navbar">  
+  
+<div class="logo">Miralt Účtovníctvo</div>  
+  
+<ul class="nav-links" id="navLinks">  
+<li><a href="index.html">Domov</a></li>  
+<li><a href="sluzby.html">Služby</a></li>  
+<li><a href="firma.html">Firma</a></li>  
+<li><a href="kontakt.html">Kontakt</a></li>  
+</ul>  
+  
+<div class="hamburger" onclick="toggleMenu()">  
+<span></span>  
+<span></span>  
+<span></span>  
+</div>  
+  
+</div>  
+</header>  
+  
+<section class="section-bg">  
+  
+<div class="box">  
+  
+<h1>Základné údaje o našej firme</h1>  
+<div class="line"></div>  
+  
+<ul>  
+<li><span>IČO:</span> 53 493 222</li>  
+<li><span>DIČ:</span> 2121415263</li>  
+<li><span>IČ DPH:</span> SK2121415263</li>  
+<li><span>OR SR:</span> Bratislava III, oddiel: Sro, vložka číslo: 185859/B</li>  
+<li><span>SK NACE:</span> 70220</li>  
+<li><span>Fio banka:</span> SK6383300000002201950175</li>  
+</ul>  
+  
+</div>  
+  
+</section>  
+  
+<footer>  
+© 2026 <span>Miralt Účtovníctvo</span> | Všetky práva vyhradené  
+</footer>  
+  
+<script>  
+function toggleMenu(){  
+document.getElementById("navLinks").classList.toggle("active");  
+}  
+</script>  
+  
+</body>  
 </html>
